@@ -8,11 +8,18 @@ var tree = {
   properties: {
     customer: {
       title: "Customer",
-      description: "Our beloved customers",
+      description: "Customer objects hold details for a customer",
       properties: {
         name: {
+          description: "The customer's name",
           type: ["string", "null"]
-        }
+        },
+        country_code: {
+          description: "Country code.",
+          enum: [
+            "GB"
+          ]
+        },
       }
     }
   }

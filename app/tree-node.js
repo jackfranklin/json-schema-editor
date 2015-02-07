@@ -1,6 +1,7 @@
 import React from 'react/addons';
 import TypeComponent from './type';
 import TitleComponent from './title';
+import DescriptionComponent from './description';
 import _ from 'lodash';
 
 export default class TreeNodeComponent extends React.Component {
@@ -48,7 +49,7 @@ export default class TreeNodeComponent extends React.Component {
           <table className="table">
             <tr>
               <td className="name">description</td>
-              <td className="val">{this.props.node.description}</td>
+              <td className="val"><DescriptionComponent></DescriptionComponent></td>
               <td className="edit"><i className="glyphicon glyphicon-edit"></i></td>
             </tr>
             <tr>

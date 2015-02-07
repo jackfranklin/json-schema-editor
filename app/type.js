@@ -2,6 +2,14 @@ import React from 'react';
 import _ from 'lodash';
 
 export default class TypeComponent extends React.Component {
+  renderType() {
+
+  }
+
+  renderEnum() {
+
+  }
+
   render() {
     if (this.props.type != null) {
       // type is an array of ["string", "null"]
@@ -18,9 +26,7 @@ export default class TypeComponent extends React.Component {
 
       return (
         <div>
-          <h5>Type:</h5>
-          <select>{htmlOut}</select>
-          <input type="checkbox" name="type" value="null" checked={ allowNull ? "checked" : "" }/>Allow nil?
+          <div>Type: <select>{htmlOut}</select><input type="checkbox" name="type" value="null" checked={ allowNull ? "checked" : "" }/>Allow nil?</div>
         </div>
       );
     } else {
