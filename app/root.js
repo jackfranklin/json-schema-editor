@@ -1,8 +1,11 @@
 import React from 'react';
+import SchemaComponent from './schema';
 
 export default class RootComponent extends React.Component {
   render() {
-    return <div>Root World</div>;
+    return (
+      <SchemaComponent tree={this.props.tree}></SchemaComponent>
+    );
   }
 }
 
