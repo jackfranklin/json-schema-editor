@@ -6,10 +6,7 @@
     <script>System.transpiler = '6to5';</script>
     <script src="config.js"></script>
     <script>
-      System.import('react').then(function(react) {
-        window.React = react;
         System.import("build/main").catch(console.log.bind(console));
-      });
     </script>
     <link href="style.css" type="text/css" rel="stylesheet" />
   </head>
