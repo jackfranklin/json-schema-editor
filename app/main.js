@@ -11,7 +11,7 @@ var tree = {
       description: "Our beloved customers",
       properties: {
         name: {
-          type: ["string"]
+          type: ["string", "null"]
         }
       }
     }
