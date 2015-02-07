@@ -1,4 +1,4 @@
 import React from 'react';
-import HelloComponent from './hello';
+import RootComponent from './root';
 
-React.render(<HelloComponent />, document.getElementById("app"));
+React.render(<RootComponent />, document.getElementById("app"));
