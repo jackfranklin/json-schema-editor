@@ -40,9 +40,9 @@ export default class TreeNodeComponent extends React.Component {
     }
 
     return (
-      <div>
+      <div key={this.props.title}>
         {toggleButton}
-        <div className="panel panel-default node-content">
+        <div className="node-component panel panel-default node-content">
           <div className="panel-heading">
             <TitleComponent title={this.props.node.title}></TitleComponent>
           </div>

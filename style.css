@@ -12,6 +12,14 @@
 	list-style: none;
 }
 
+.node-component {
+	display: inline-block;
+}
+
+body .node-component table {
+	width: auto;
+}
+
 .children-width li {
 	width: 500px;
 }
