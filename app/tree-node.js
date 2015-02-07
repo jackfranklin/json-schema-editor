@@ -11,7 +11,7 @@ export default class TreeNodeComponent extends React.Component {
     var childProperties;
     if (this.props.node.properties != null) {
       childProperties = this.props.node.properties.map((node, indx) => {
-        return <li key={index}><TreeNodeComponent
+        return <li key={index}><TreeNodeComponent node={node} /></li>;
       })
     }
 
