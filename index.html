@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSON Schema Editor</title>
+    <script src="jspm_packages/system.js"></script>
+    <script>System.transpiler = '6to5';</script>
+    <script src="config.js"></script>
+    <script>
+      System.import("build/main").catch(console.log.bind(console));
+    </script>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

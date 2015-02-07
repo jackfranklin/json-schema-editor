@@ -1,0 +1,12 @@
+{
+  "jspm": {
+    "name": "json-schema-editor",
+    "dependencies": {
+      "react": "0.13.0-beta.1"
+    }
+  },
+  "devDependencies": {
+    "react-tools": "^0.12.2",
+    "serve": "^1.4.0"
+  }
+}
