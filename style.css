@@ -8,5 +8,27 @@
 	color: inherit !important;
 }
 
+.children-nodes li {
+	list-style: none;
+}
 
+.children-width li {
+	width: 500px;
+}
+
+.children-visible {
+
+}
+
+.children-hidden {
+	display: none;
+}
+
+.node-content {
+	margin-left: 20px;
+}
+
+.expand-button {
+	float: left;
+}
 
