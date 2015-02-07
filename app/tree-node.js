@@ -6,7 +6,6 @@ export default class TreeNodeComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = { visible: true };
-    window.React = React;
   }
 
   render() {
@@ -32,7 +31,7 @@ export default class TreeNodeComponent extends React.Component {
     return (
       <div>
         <h5>
-          <i onClick={this.props.toggle} className={expandIconClasses}></i>
+          <i onClick={this.toggle.bind(this)} className={expandIconClasses}></i>
           <span>{this.props.node.title}</span>
         </h5>
         <p>Description: {this.props.node.description}</p>
@@ -44,8 +43,11 @@ export default class TreeNodeComponent extends React.Component {
     );
   }
 
-  toggle() {
+  toggle(evt) {
     this.setState({visible: !this.state.visible});
+    evt.stopPropagation();
+    evt.preventDefault();
   }
+
 }
 

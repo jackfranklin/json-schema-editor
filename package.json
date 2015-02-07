@@ -8,7 +8,7 @@
     }
   },
   "devDependencies": {
-    "react-tools": "^0.12.2",
+    "react-tools": "^0.13.0-beta.1",
     "serve": "^1.4.0"
   }
 }
