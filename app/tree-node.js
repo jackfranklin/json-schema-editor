@@ -12,10 +12,15 @@ export default class TreeNodeComponent extends React.Component {
 
   render() {
     var childProperties = [];
+    var childElementHTML;
     if (this.props.node.properties != null) {
       _.forOwn(this.props.node.properties, (node, name) => {
         childProperties.push(<li key={name}><TreeNodeComponent node={node} /></li>);
       });
+      childElementHTML = <hr />
+      <ul className={childElementVisibility}>
+        {childProperties}
+      </ul>;
     }
 
     var cx = React.addons.classSet;
@@ -56,10 +61,7 @@ export default class TreeNodeComponent extends React.Component {
               <td className="edit"><i className="glyphicon glyphicon-edit"></i></td>
             </tr>
           </table>
-          <hr />
-          <ul className={childElementVisibility}>
-            {childProperties}
-          </ul>
+          {childElementHTML}
         </div>
       </div>
     );
