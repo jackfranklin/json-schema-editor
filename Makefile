@@ -5,6 +5,7 @@ jsx:
 	./node_modules/.bin/jsx --watch app/ build/
 
 install:
+	npm install --global jspm
 	npm install
 	jspm install
 
