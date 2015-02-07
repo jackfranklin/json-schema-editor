@@ -3,6 +3,6 @@ import TreeNodeComponent from './tree-node';
 
 export default class SchemaComponent extends React.Component {
   render() {
-    return <TreeNode node={this.props.tree}></TreeNode>;
+    return <TreeNodeComponent node={this.props.tree}></TreeNodeComponent>;
   }
 }

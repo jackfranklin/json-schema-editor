@@ -1,18 +1,18 @@
 import React from 'react';
+import _ from 'lodash';
 
 export default class TreeNodeComponent extends React.Component {
-  getInitialState() {
-    return {
-      visible: true,
-    };
+  constructor(props) {
+    super(props);
+    this.state = { visible: true };
   }
 
   render() {
     var childProperties;
     if (this.props.node.properties != null) {
-      childProperties = this.props.node.properties.map((node, indx) => {
-        return <li key={index}><TreeNodeComponent node={node} /></li>;
-      })
+      childProperties = _.forOwn(this.props.node.properties, (node, name) => {
+        return <li key={name}><TreeNodeComponent node={node} /></li>;
+      });
     }
 
     var style = {};
