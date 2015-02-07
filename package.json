@@ -2,6 +2,7 @@
   "jspm": {
     "name": "json-schema-editor",
     "dependencies": {
+      "bootstrap": "^3.3.2",
       "lodash": "npm:lodash@^3.1.0",
       "react": "0.13.0-beta.1"
     }
