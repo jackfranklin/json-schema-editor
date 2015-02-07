@@ -31,11 +31,16 @@ export default class TreeNodeComponent extends React.Component {
       'children-hidden': !this.state.visible,
     })
 
+    var toggleButton;
+    if (this.props.node.properties) {
+      toggleButton = <i onClick={this.toggle.bind(this)} className={expandIconClasses}></i>;
+    } else {
+      toggleButton = null;
+    }
+
     return (
       <div>
-        <div>
-          <i onClick={this.toggle.bind(this)} className={expandIconClasses}></i>
-        </div>
+        {toggleButton}
         <div className="panel panel-default node-content">
           <div className="panel-heading">
             <TitleComponent title={this.props.node.title}></TitleComponent>
