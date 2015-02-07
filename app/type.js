@@ -17,8 +17,7 @@ export default class TypeComponent extends React.Component {
       var types = ["boolean", "integer", "number", "string"];
 
       var htmlOut = types.map((type) => {
-        var selected = _.contains(this.props.type, type)
-        return <option value={type} selected={selected}>{type}</option>;
+        return <option key={type} value={type}>{type}</option>;
       })
 
       // TODO
@@ -26,7 +25,11 @@ export default class TypeComponent extends React.Component {
 
       return (
         <div>
-          <div>Type: <select>{htmlOut}</select><input type="checkbox" name="type" value="null" checked={ allowNull ? "checked" : "" }/>Allow nil?</div>
+          <div>
+            <select value={this.props.out}>{htmlOut}</select>
+            <input type="checkbox" name="type" value="null" checked={ allowNull ? "checked" : "" }/>
+            Allow nil?
+          </div>
         </div>
       );
     } else {

@@ -17,6 +17,7 @@ export default class TreeNodeComponent extends React.Component {
         childProperties.push(<li key={name}><TreeNodeComponent node={node} /></li>);
       });
     }
+
     var cx = React.addons.classSet;
 
     var expandIconClasses = cx({
@@ -39,22 +40,23 @@ export default class TreeNodeComponent extends React.Component {
         <i onClick={this.toggle.bind(this)} className={expandIconClasses}></i>
         <div className="node-component panel panel-default node-content">
           <div className="panel-heading">
-            <TitleComponent title={this.props.node.title}></TitleComponent>
+            {this.props.node.title}
           </div>
           <table className="table">
             <tr>
-              <td className="name">description</td>
-              <td className="val"><DescriptionComponent></DescriptionComponent></td>
+              <td className="name">desc:</td>
+              <td className="val"><DescriptionComponent description={this.props.node.description}></DescriptionComponent></td>
               <td className="edit"><i className="glyphicon glyphicon-edit"></i></td>
             </tr>
             <tr>
-              <td className="name">type</td>
+              <td className="name">type:</td>
               <td className="val">
                 <TypeComponent type={this.props.node.type}></TypeComponent>
               </td>
               <td className="edit"><i className="glyphicon glyphicon-edit"></i></td>
             </tr>
           </table>
+          <hr />
           <ul className={childElementVisibility}>
             {childProperties}
           </ul>

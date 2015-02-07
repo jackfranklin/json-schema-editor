@@ -5,23 +5,24 @@
 }
 
 * {
-	color: inherit !important;
+  color: inherit !important;
 }
 
 .children-nodes li {
-	list-style: none;
+  list-style: none;
 }
 
 .node-component {
-	display: inline-block;
+  display: inline-block;
 }
 
 body .node-component table {
-	width: auto;
+  width: auto;
 }
 
-.children-width li {
-	width: 500px;
+.node-component table td.name {
+  font-size: 80%;
+  color: #777 !important;
 }
 
 .children-visible {
@@ -29,14 +30,15 @@ body .node-component table {
 }
 
 .node-content {
-	margin-left: 20px;
+  margin-left: 20px;
 }
 
 .expand-button {
-	float: left;
+  float: left;
+  user-select: none;
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 

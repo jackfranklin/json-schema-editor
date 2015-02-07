@@ -5,7 +5,7 @@ export default class DescriptionComponent extends React.Component {
     if (this.props.description != null) {
       return (
         <div>
-          <div>Description: {this.props.description}</div>
+          <div>{this.props.description}</div>
         </div>
       );
     } else {
