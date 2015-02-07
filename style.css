@@ -25,6 +25,10 @@ body .node-component table {
   color: #777 !important;
 }
 
+.node-component hr {
+  margin-top: 0;
+}
+
 .children-visible {
 
 }
