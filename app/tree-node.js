@@ -32,7 +32,7 @@ export default class TreeNodeComponent extends React.Component {
     return (
       <div>
         <h5>
-          <i onClick={this.toggle} className={expandIconClasses}></i>
+          <i onClick={this.props.toggle} className={expandIconClasses}></i>
           <span>{this.props.node.title}</span>
         </h5>
         <p>Description: {this.props.node.description}</p>
