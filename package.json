@@ -3,6 +3,7 @@
     "name": "json-schema-editor",
     "dependencies": {
       "bootstrap": "^3.3.2",
+      "eventemitter": "npm:wolfy87-eventemitter@^4.2.11",
       "lodash": "npm:lodash@^3.1.0",
       "react": "0.13.0-beta.1"
     }

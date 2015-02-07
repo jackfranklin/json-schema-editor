@@ -12,6 +12,7 @@ System.config({
 System.config({
   "map": {
     "bootstrap": "github:twbs/bootstrap@3.3.2",
+    "eventemitter": "npm:wolfy87-eventemitter@4.2.11",
     "lodash": "npm:lodash@3.1.0",
     "react": "npm:react@0.13.0-beta.1",
     "github:jspm/nodelibs-buffer@0.1.0": {
@@ -115,6 +116,9 @@ System.config({
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:wolfy87-eventemitter@4.2.11": {
+      "fs": "github:jspm/nodelibs-fs@0.1.1"
     }
   }
 });
