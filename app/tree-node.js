@@ -1,4 +1,5 @@
 import React from 'react';
+import TypeComponent from './type';
 import _ from 'lodash';
 
 export default class TreeNodeComponent extends React.Component {
@@ -8,10 +9,10 @@ export default class TreeNodeComponent extends React.Component {
   }
 
   render() {
-    var childProperties;
+    var childProperties = [];
     if (this.props.node.properties != null) {
-      childProperties = _.forOwn(this.props.node.properties, (node, name) => {
-        return <li key={name}><TreeNodeComponent node={node} /></li>;
+      _.forOwn(this.props.node.properties, (node, name) => {
+        childProperties.push(<li key={name}>{name}: <TreeNodeComponent node={node} /></li>);
       });
     }
 
@@ -24,7 +25,9 @@ export default class TreeNodeComponent extends React.Component {
         <h5 onClick={this.toggle}>
           {this.props.node.title}
         </h5>
-        <p>{this.props.node.description}</p>
+        <p>Description: {this.props.node.description}</p>
+        <TypeComponent type={this.props.node.type}></TypeComponent>
+
         <ul style={style}>
           {childProperties}
         </ul>

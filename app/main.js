@@ -7,6 +7,7 @@ var tree = {
   properties: {
     customer: {
       title: "Customer",
+      description: "Our beloved customers",
       properties: {
         name: {
           type: ["string"]
