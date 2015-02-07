@@ -1,5 +1,6 @@
 import React from 'react/addons';
 import TypeComponent from './type';
+import TitleComponent from './title';
 import _ from 'lodash';
 
 export default class TreeNodeComponent extends React.Component {
@@ -36,7 +37,9 @@ export default class TreeNodeComponent extends React.Component {
           <i onClick={this.toggle.bind(this)} className={expandIconClasses}></i>
         </div>
         <div className="panel panel-default node-content">
-          <div className="panel-heading">{this.props.node.title}</div>
+          <div className="panel-heading">
+            <TitleComponent title={this.props.node.title}></TitleComponent>
+          </div>
           <table className="table">
             <tr>
               <td className="name">description</td>
