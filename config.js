@@ -12,6 +12,7 @@ System.config({
 System.config({
   "map": {
     "bootstrap": "github:twbs/bootstrap@3.3.2",
+    "lodash": "npm:lodash@3.1.0",
     "react": "npm:react@0.13.0-beta.1",
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.0.1"
@@ -70,6 +71,9 @@ System.config({
       "esprima-fb": "npm:esprima-fb@7001.1.0-dev-harmony-fb",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "source-map": "npm:source-map@0.1.31"
+    },
+    "npm:lodash@3.1.0": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"
