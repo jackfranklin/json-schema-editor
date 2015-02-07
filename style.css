@@ -28,15 +28,15 @@ body .node-component table {
 
 }
 
-.children-hidden {
-	display: none;
-}
-
 .node-content {
 	margin-left: 20px;
 }
 
 .expand-button {
 	float: left;
+}
+
+.hidden {
+	display: none;
 }
 

@@ -22,26 +22,21 @@ export default class TreeNodeComponent extends React.Component {
     var expandIconClasses = cx({
       'glyphicon': true,
       'expand-button': true,
+      'hidden': !this.props.node.properties,
       'glyphicon-minus': this.state.visible,
       'glyphicon-plus': !this.state.visible,
     });
 
     var childElementVisibility = cx({
       'children-nodes': true,
+      'children-width': true,
       'children-visible': this.state.visible,
-      'children-hidden': !this.state.visible,
+      'hidden': !this.state.visible,
     })
 
-    var toggleButton;
-    if (this.props.node.properties) {
-      toggleButton = <i onClick={this.toggle.bind(this)} className={expandIconClasses}></i>;
-    } else {
-      toggleButton = null;
-    }
-
     return (
-      <div key={this.props.title}>
-        {toggleButton}
+      <div>
+        <i onClick={this.toggle.bind(this)} className={expandIconClasses}></i>
         <div className="node-component panel panel-default node-content">
           <div className="panel-heading">
             <TitleComponent title={this.props.node.title}></TitleComponent>
