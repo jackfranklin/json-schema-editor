@@ -1,3 +1,12 @@
 * {
   color: red;
+  /* what awful person writes css like this */
+  /* oh wait. */
 }
+
+* {
+	color: inherit !important;
+}
+
+
+
