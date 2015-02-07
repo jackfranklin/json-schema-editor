@@ -38,7 +38,7 @@ export default class TreeNodeComponent extends React.Component {
     return (
       <div>
         <i onClick={this.toggle.bind(this)} className={expandIconClasses}></i>
-        <div className="node-component panel panel-default node-content">
+        <div className="node-component panel panel-default node-content padding">
           <div className="panel-heading">
             {this.props.node.title}
           </div>
