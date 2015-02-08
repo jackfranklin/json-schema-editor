@@ -1,5 +1,5 @@
 import React from 'react';
-import RootComponent from './root';
+import SchemaComponent from './schema';
 import Events from './events';
 
 var tree = {
@@ -27,4 +27,8 @@ var tree = {
 
 var events = new Events();
 
-React.render(<RootComponent tree={tree} emitter={events} />, document.getElementById("app"));
+var setTree = (tree) => {
+  console.log("main set tree");
+}
+
+React.render(<SchemaComponent node={tree} setNode={setTree} emitter={events} />, document.getElementById("app"));

@@ -11,12 +11,14 @@ export default class TypeComponent extends React.Component {
   }
 
   render() {
-    if (this.props.type != null) {
-      // type is an array of ["string", "null"]
-      var allowNull = _.contains(this.props.type, "null")
+    if (this.props.node && (this.props.node.type || this.props.node.enum)) {
       var types = ["boolean", "integer", "number", "string"];
+      var enumTypes = ["date-time", "date", "email", "hostname", "ipv4", "ipv6", "regex", "uri", "uuid"];
 
-      var htmlOut = types.map((type) => {
+      var allowNull = _.contains(this.props.node.type, "null");
+      var currentType = _.chain(this.props.node.type).filter((t) => { return t != "null"; }).first().value();
+
+      var typeSelect = types.map((type) => {
         return <option key={type} value={type}>{type}</option>;
       })
 
@@ -26,7 +28,7 @@ export default class TypeComponent extends React.Component {
       return (
         <div>
           <div>
-            <select value={this.props.out}>{htmlOut}</select>
+            <select defaultValue={ currentType }>{typeSelect}</select>
             <input type="checkbox" name="type" value="null" checked={ allowNull ? "checked" : "" }/>
             Allow nil?
           </div>
